@@ -1,0 +1,35 @@
+:root {
+    --color-primario: #3498db;      /* Azul claro */
+    --color-secundario: #2ecc71;    /* Verde */
+    --color-acento: #e74c3c;        /* Rojo */
+    --color-fondo: #ecf0f1;         /* Gris claro */
+    --color-texto: #333333;         /* Gris oscuro */
+    --color-texto-secundario: #7f8c8d; /* Gris suave */
+  }
+
+  body {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0%;
+  }
+
+  .hero {
+    height: 50vh;
+    background-image: url(img/img_header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  }
+
+  .titulo {
+    margin: 0;
+    color: var(--color-fondo);
+    font-size: 5rem;
+  }
+
+.contenedor_producto {
+    margin: 5rem 0;
+    height: 100vh;
+}
