@@ -20,7 +20,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .titulo {
@@ -29,7 +32,40 @@
     font-size: 5rem;
   }
 
+  .titulo span{
+    color: rgb(229, 229, 11);
+  }
+
 .contenedor_producto {
-    margin: 5rem 0;
+    margin: 5rem 0 0 0;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.titulo_producto{
+    font-size: 4rem;
+    margin: 1rem;
+}
+
+.producto {
+    height: auto ;
+    width: 50rem;
+}
+
+
+.producto img {
+    height: auto;
+    width: 50rem;
+}
+
+.texto_producto {
+font-size: 2rem;
+}
+
+.texto_producto span{
+color: #e74c3c;
 }
