@@ -37,7 +37,7 @@
   }
 
 .contenedor_producto {
-    margin: 5rem 0 0 0;
+    margin: 4rem 0 0 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -75,3 +75,37 @@ color: #e74c3c;
     text-align: center;
     font-size: 1.2rem;
 }
+
+/* <------------------------------------------historia----------------------------------> */
+
+.historia_cantante{
+  height: 100vh;
+  width: auto;
+  margin: 5rem 0 0 0;
+}
+
+.historia_titulo{
+    font-size: 4rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.historia_contenedor{
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+
+.historia_texto{
+  margin: 1rem;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+.historia_contenedor img {
+border-radius: 0.5rem;
+height: 25rem;
+width: auto;
+margin: 2rem;
+}
+
