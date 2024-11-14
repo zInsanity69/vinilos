@@ -109,3 +109,32 @@ width: auto;
 margin: 2rem;
 }
 
+footer {
+  background-color: #333333;
+  display: flex;
+  margin-top: 60px;
+  justify-content: center;
+  height: 140px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.social-media h3{
+
+  color: white;
+  text-align: center;
+
+
+}
+
+.icons{
+  color: white;
+margin-top:60px;
+display: flex;
+justify-content: 20%;
+
+
+}
+
