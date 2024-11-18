@@ -140,3 +140,42 @@ justify-content: 20%;
 
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.social-media, .icons, .line-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 10px;
+}
+
+
+.line-container {
+  margin-top: 20px;
+}
+
+.line-footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.line-footer ul li {
+  margin: 5px 10px;
+}
