@@ -122,18 +122,35 @@ margin: 2rem;
 }
 
 .video-contenedor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 0.5rem;
-  height: 25rem;
+  height: 315px;
   width: auto;
-  margin: 2rem;
-  text-align: center;
+}
+
+.gif{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 300px;
+  height: 100%;
+}
+
+.gif1{
+  background-image: url(img/ado-dance-ado-freedom.gif);
+  margin-right: 2px;
+}
+
+.gif2{
+  background-image: url(img/ado-dance-ado-freedom.gif);
+  margin-left: 2px;
 }
 
 
   .video_contenedor video {
     border-radius: 0.5rem;
-    height: 600px;
-    width: 600px;
     margin: 2rem auto;
     display: block;
 }
