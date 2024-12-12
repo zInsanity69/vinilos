@@ -11,20 +11,35 @@
 </head>
 <body>
 
-<div class="hero">
-    <h1 class="titulo">El gran conciertoe de <span>Ado</span></h1>
+<div class="menu-lateral" id="menuLateral">
+    <div class="menu-logo" onclick="toggleMenu()">
+        <img src="img/vinilea.PNG" alt="Logo">
+    </div>
+    <ul class="menu-links">
+        <li><a href="#Inicio">Inicio</a></li>
+        <li><a href="#Biografía">Biografía</a></li>
+        <li><a href="#">Tienda</a></li>
+    </ul>
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+    <span>Menu</span>
+</div>
+
+<div class="hero" id="Inicio">
+    <h1 class="titulo">El gran concierto de <span>Ado</span></h1>
 </div>
 
 <div class="contenedor_producto">
-<h2 class="titulo_producto">Álbum debut</h2>
-<div class="producto">
-    <img src="img/img_vinilo.jpg" alt="">
-    <p class="nombre_producto">Ado Kyogen Limited Edition  <span>400€</span></p>
-    <p class="descripcion_producto">Ado Kyogen Limited Edition es una edición especial del álbum debut de Ado, lanzado en 2022. Mezcla pop, rock y electrónica con letras que exploran dolor y autodescubrimiento. Ado, famosa por su voz intensa y estilo dramático, incluye en esta edición contenido visual exclusivo que resalta su estética única y rebelde.</p>
-</div>
+    <h2 class="titulo_producto">Álbum debut</h2>
+    <div class="producto">
+        <img src="img/img_vinilo.jpg" alt="">
+        <p class="nombre_producto">Ado Kyogen Limited Edition  <span>400€</span></p>
+        <p class="descripcion_producto">Ado Kyogen Limited Edition es una edición especial del álbum debut de Ado, lanzado en 2022. Mezcla pop, rock y electrónica con letras que exploran dolor y autodescubrimiento. Ado, famosa por su voz intensa y estilo dramático, incluye en esta edición contenido visual exclusivo que resalta su estética única y rebelde.</p>
+    </div>
 </div>
 
-<div class="historia_cantante">
+<div class="historia_cantante" id="Biografía">
 
     <h2 class="historia_titulo">La historia de Ado</h2>
     <div class="historia_contenedor">
@@ -54,9 +69,36 @@
             <li class="nav-item"><a href="#">CONTRATO DE DESENTIMIENTO</a></li>
             <li class="nav-item"><a href="#">CANAL ÉTICO</a></li></ul><p>Copyright © 2024 Vinilea S.L. Todos los derechos reservados.</p></div>
     </div>
-    </body>
 </footer>
 
-  
+<script>
+function toggleMenu() {
+    const menu = document.getElementById('menuLateral');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const overlay = document.querySelector('.overlay');
+    
+    const isActive = menu.classList.toggle('active');
+    
+    // Mostrar u ocultar el botón y la superposición
+    menuToggle.classList.toggle('hidden', isActive);
+    overlay.classList.toggle('active', isActive);
+}
+
+// Cerrar el menú al hacer clic fuera de él
+function closeMenu() {
+    const menu = document.getElementById('menuLateral');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const overlay = document.querySelector('.overlay');
+    
+    menu.classList.remove('active');
+    menuToggle.classList.remove('hidden');
+    overlay.classList.remove('active');
+}
+
+// Crear la capa de fondo para detectar clics
+document.body.insertAdjacentHTML('beforeend', '<div class="overlay" onclick="closeMenu()"></div>');
+
+</script>
+
 </body>
 </html>
