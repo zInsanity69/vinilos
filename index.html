@@ -10,23 +10,25 @@
     <title>Ado</title>
 </head>
 <body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <div class="menu-lateral" id="menuLateral">
     <div class="menu-logo" onclick="toggleMenu()">
         <img src="img/vinilea.PNG" alt="Logo">
     </div>
     <ul class="menu-links">
-        <li><a href="#Inicio">Inicio</a></li>
-        <li><a href="#Biografía">Biografía</a></li>
-        <li><a href="#">Tienda</a></li>
+        <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
+        <li><a href="#biografia" onclick="toggleMenu()">Biografía</a></li>
+        <li><a href="#tienda" onclick="toggleMenu()">Tienda</a></li>
     </ul>
+    
 </div>
 
 <div class="menu-toggle" onclick="toggleMenu()">
     <span>Menu</span>
 </div>
 
-<div class="hero" id="Inicio">
+<div class="hero" id="inicio">
     <h1 class="titulo">El gran concierto de <span>Ado</span></h1>
 </div>
 
@@ -39,7 +41,7 @@
     </div>
 </div>
 
-<div class="historia_cantante" id="Biografía">
+<div class="historia_cantante" id="biografia">
 
     <h2 class="historia_titulo">La historia de Ado</h2>
     <div class="historia_contenedor">
@@ -72,33 +74,46 @@
 </footer>
 
 <script>
-function toggleMenu() {
-    const menu = document.getElementById('menuLateral');
-    const menuToggle = document.querySelector('.menu-toggle');
-    const overlay = document.querySelector('.overlay');
+    $(document).ready(function () {
+        // Función para alternar el menú lateral
+        $('.menu-toggle').click(function () {
+            $('#menuLateral').toggleClass('active'); // Activa/desactiva la clase 'active'
     
-    const isActive = menu.classList.toggle('active');
+            if ($('#menuLateral').hasClass('active')) {
+                $('.menu-toggle').hide(); // Oculta el botón cuando el menú está abierto
+            } else {
+                $('.menu-toggle').show(); // Muestra el botón cuando el menú está cerrado
+            }
+        });
     
-    // Mostrar u ocultar el botón y la superposición
-    menuToggle.classList.toggle('hidden', isActive);
-    overlay.classList.toggle('active', isActive);
-}
-
-// Cerrar el menú al hacer clic fuera de él
-function closeMenu() {
-    const menu = document.getElementById('menuLateral');
-    const menuToggle = document.querySelector('.menu-toggle');
-    const overlay = document.querySelector('.overlay');
+        // Cierra el menú cuando se hace clic fuera de él
+        $(document).click(function (event) {
+            if (!$(event.target).closest('#menuLateral').length && 
+                !$(event.target).closest('.menu-toggle').length && 
+                $('#menuLateral').hasClass('active')) {
+                $('#menuLateral').removeClass('active');
+                $('.menu-toggle').show(); // Muestra el botón si el menú se cierra
+            }
+        });
     
-    menu.classList.remove('active');
-    menuToggle.classList.remove('hidden');
-    overlay.classList.remove('active');
-}
-
-// Crear la capa de fondo para detectar clics
-document.body.insertAdjacentHTML('beforeend', '<div class="overlay" onclick="closeMenu()"></div>');
-
-</script>
+        // Agrega desplazamiento suave y cierra el menú al hacer clic en un enlace
+        $('.menu-links a').click(function (event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            var targetId = $(this).attr('href'); // Obtiene el destino
+            var targetElement = $(targetId);
+    
+            $('html, body').animate({
+                scrollTop: targetElement.offset().top
+            }, 600); // Desplazamiento suave
+    
+            // Cierra el menú si está activo
+            if ($('#menuLateral').hasClass('active')) {
+                $('#menuLateral').removeClass('active');
+                $('.menu-toggle').show(); // Muestra el botón si el menú se cierra
+            }
+        });
+    });
+    </script>
 
 </body>
 </html>
