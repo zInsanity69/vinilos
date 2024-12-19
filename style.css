@@ -12,6 +12,7 @@
   font-weight: 400;
   font-style: normal;
   margin: 0%;
+  box-sizing: border-box;
   }
 
   .hero {
@@ -63,7 +64,7 @@
 }
 
 .nombre_producto {
-font-size: 2rem;
+font-size: 2.5rem;
 margin: 32px 0 10px 0;
 }
 
@@ -73,13 +74,13 @@ color: #e74c3c;
 
 .descripcion_producto{
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 /* <------------------------------------------historia----------------------------------> */
 
 .historia_cantante{
-  height: 100vh;
+  height: fit-content;
   width: auto;
   margin: 5rem 0 0 0;
 }
@@ -97,7 +98,6 @@ color: #e74c3c;
 }
 
 .historia_texto{
-  margin: 0 2rem 0 0;
   text-align: justify;
   font-size: 1.5rem;
 }
@@ -109,59 +109,189 @@ width: auto;
 margin: 2rem;
 }
 
+/* Estilos generales */
+.historia_cantante {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.historia_contenedor {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.historia_contenedor img {
+  width: 40%; /* Ajustar el tamaño de la imagen */
+  height: auto;
+}
+
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .historia_contenedor {
+      flex-direction: column; /* Cambiar a disposición vertical */
+      text-align: center;
+      gap: 10px;
+  }
+
+  .historia_contenedor img {
+      width: 100%; /* Imagen ocupa todo el ancho disponible */
+  }
+
+  .historia_texto {
+    font-size: 3rem; /* Reducir ligeramente el tamaño del texto */
+  }
+
+  .video_promocional {
+    height: fit-content;
+      margin-top: 20px;
+  }
+
+  .video-contenedor iframe {
+      width: 100%; /* Asegura que el video sea responsive */
+      height: auto;
+      aspect-ratio: 16/9; /* Mantiene proporción de video */
+  }
+}
+.video-promocional{
+  height: fit-content;
+}
+/* <------------------------------------------vídeo/gif----------------------------------> */
+/* --- Estilos generales existentes --- */
+.video_promocional {
+height: fit-content;
+  width: auto;
+  margin: 5rem;
+}
+
+.video_titulo {
+  font-size: 4rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+iframe {
+  border-radius: 0.2rem;
+}
+
+.video-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  height: 315px;
+  width: auto;
+  gap : 1rem;
+  ;
+}
+
+.gif {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 100%;
+  border-radius: 0.2rem;
+}
+
+.gif1 {
+  background-image: url(img/ado-dance-ado-freedom.gif);
+}
+
+.gif2 {
+  background-image: url(img/ado-dance-ado-freedom.gif);
+}
+
+.video_contenedor iframe {
+  margin: 2rem auto;
+  width: 560px; /* Aseguramos que el video tenga un tamaño fijo */
+  height: 315px; /* Ajustamos la altura del video */
+}
+
+/* --- Media Query para pantallas pequeñas (max-width: 768px) --- */
+@media (max-width: 768px) {
+  .video_promocional {
+    height: auto; /* Ajusta la altura al contenido */
+    margin: 2rem 0; /* Reduce margen superior e inferior */
+    padding-bottom: 3rem; /* Añade relleno adicional en la parte inferior */
+  }
+
+  .video_titulo {
+    font-size: 2.5rem; /* Reduce el tamaño del título */
+    margin: 1rem 0;
+  }
+
+  .video-contenedor {
+    flex-direction: column; /* Cambia a disposición vertical */
+    height: auto; /* Ajusta la altura según el contenido */
+    gap: 1rem; /* Espacio entre elementos */
+  }
+
+  .gif {
+    width: 100%; /* GIF ocupa todo el ancho disponible en pantallas pequeñas */
+    height: 200px; /* Ajusta la altura de los GIFs */
+  }
+
+
+  iframe {
+    width: 100%; /* Video ocupa todo el ancho disponible */
+    height: auto;
+    aspect-ratio: 16/9; /* Mantiene proporciones */
+  }
+}
+
+/* --- Media Query para pantallas medianas (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+  .video_promocional {
+    margin-bottom: 4rem; /* Incrementa el margen inferior */
+    padding-bottom: 2rem; /* Asegura un espacio adicional con el footer */
+  }
+
+  .video-contenedor {
+    gap: 1.5rem; /* Incrementa el espacio entre los elementos */
+  }
+
+  .gif {
+    width: 250px; /* Ajusta tamaño de los GIFs */
+    height: auto; /* Altura automática */
+  }
+}
+
+
+
 /* ---------------------------------------footer------------------------------------ */
 
 footer {
+  height: fit-content;
   background-color: #121212;
   display: flex;
-  margin-top: 60px;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  height: 140px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
+  text-align: center;
+  padding: 20px;
 }
 
-.social-media h3{
-
+.social-media h3 {
   color: white;
   text-align: center;
-
-
-}
-
-.icons{
-color: white;
-margin-top:60px;
-display: flex;
-justify-content: 20%;
-
-
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.social-media, .icons, .line-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
+  margin: 5px 0; /* Reducido el margen superior e inferior */
+  font-size: 1.5rem; /* Ajustamos el tamaño de la fuente */
 }
 
 .icons {
+  color: white;
   display: flex;
   justify-content: center;
-  align-items: center; 
-  gap: 10px;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
 }
-
 
 .line-container {
   margin-top: 20px;
@@ -174,11 +304,104 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 15px;
 }
 
 .line-footer ul li {
-  margin: 5px 10px;
+  margin: 5px;
 }
+
+.line-footer ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.line-footer ul li a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.line-footer p {
+  color: white;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* --- Media Queries para Responsividad --- */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .social-media h3 {
+    font-size: 1.2rem; /* Reducimos aún más el tamaño del título */
+    margin: 5px 0;
+  }
+
+  .line-footer ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .icons {
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  .line-footer p {
+    font-size: 11px; /* Reducimos un poco el tamaño del texto de copyright */
+  }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .social-media h3 {
+    font-size: 1.3rem; /* Ajuste moderado del tamaño del título */
+  }
+
+  .line-footer ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .icons {
+    gap: 15px;
+  }
+
+  footer {
+    padding: 20px;
+  }
+
+  .line-footer p {
+    font-size: 12px;
+  }
+}
+
+/* Pantallas grandes (escritorio) */
+@media (min-width: 1025px) {
+  footer {
+    padding: 30px;
+  }
+
+  .icons {
+    gap: 20px;
+  }
+
+  .social-media h3 {
+    font-size: 1.5rem; /* Título de tamaño normal en pantallas grandes */
+  }
+
+  .line-footer p {
+    font-size: 12px;
+  }
+}
+
+
+/* ---------------------------------------Menú lateral------------------------------------ */
 
 .menu-lateral {
   position: fixed;
@@ -270,3 +493,12 @@ footer {
 .overlay.active {
   display: block;
 }
+
+/* --------------------------------------- Marquee------------------------------------ */
+
+marquee {
+  background-color: #121212;
+  color: white;
+  font-size: 2rem;
+}
+

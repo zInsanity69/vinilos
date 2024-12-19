@@ -50,12 +50,23 @@
             <Strong>Ado</Strong> es una joven cantante japonesa que irrumpió en la industria musical en 2020. Su éxito llegó rápidamente gracias a su sencillo <strong>"Usseewa"</strong>, una canción de crítica social que se volvió viral por su letra desafiante y su poderosa interpretación vocal. Ado, quien comenzó publicando canciones en línea, es conocida por su estilo vocal único, que combina tonos <strong>intensos y emocionales</strong> con un toque dramático. Su rápido ascenso la ha convertido en una de las figuras más destacadas del pop japonés, especialmente entre el público joven, y continúa innovando con una mezcla de géneros como pop, rock y electrónica en sus producciones.
         </p>
     </div>
-
+    
+    <div class="video_promocional">
+        <h2 class="video_titulo">Mira un poco de Ado</h2>
+        <div class="video-contenedor">
+            <div class="gif gif1"></div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gapyLDahtMI" frameborder="0" allowfullscreen></iframe>
+            <div class=" gif gif2"></div>
+        </div>
+    </div>
+    <marquee behavior="" direction="left" scrollamount="15" >ADO World Tour 2025: Hibana — ADO World Tour 2025: Hibana — ADO World Tour 2025: Hibana</marquee>
 </div>
+
+
 
 <footer>
     <div class="social-media">
-        <h3>Redes navales</h3>
+        <h3>Redes sociales</h3>
     </div>
     <div class="icons">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path> <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path> </svg>
@@ -88,8 +99,8 @@
     
         // Cierra el menú cuando se hace clic fuera de él
         $(document).click(function (event) {
-            if (!$(event.target).closest('#menuLateral').length && 
-                !$(event.target).closest('.menu-toggle').length && 
+            if (!$(event.target).closest('#menuLateral').length &&
+                !$(event.target).closest('.menu-toggle').length &&
                 $('#menuLateral').hasClass('active')) {
                 $('#menuLateral').removeClass('active');
                 $('.menu-toggle').show(); // Muestra el botón si el menú se cierra
