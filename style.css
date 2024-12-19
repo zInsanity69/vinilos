@@ -12,6 +12,7 @@
   font-weight: 400;
   font-style: normal;
   margin: 0%;
+  box-sizing: border-box;
   }
 
   .hero {
@@ -63,7 +64,7 @@
 }
 
 .nombre_producto {
-font-size: 2rem;
+font-size: 2.5rem;
 margin: 32px 0 10px 0;
 }
 
@@ -73,13 +74,13 @@ color: #e74c3c;
 
 .descripcion_producto{
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 /* <------------------------------------------historia----------------------------------> */
 
 .historia_cantante{
-  height: 100vh;
+  height: fit-content;
   width: auto;
   margin: 5rem 0 0 0;
 }
@@ -97,7 +98,6 @@ color: #e74c3c;
 }
 
 .historia_texto{
-  margin: 0 2rem 0 0;
   text-align: justify;
   font-size: 1.5rem;
 }
@@ -114,7 +114,6 @@ margin: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   text-align: center;
 }
 
@@ -123,19 +122,15 @@ margin: 2rem;
   align-items: center;
   gap: 20px;
   text-align: left;
-  max-width: 800px;
   margin: 0 auto;
+  padding: 2rem;
 }
 
 .historia_contenedor img {
-  width: 50%; /* Ajustar el tamaño de la imagen */
+  width: 40%; /* Ajustar el tamaño de la imagen */
   height: auto;
 }
 
-.historia_texto {
-  font-size: 16px;
-  color: #333;
-}
 
 /* Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -150,10 +145,11 @@ margin: 2rem;
   }
 
   .historia_texto {
-    font-size: 1.2rem; /* Reducir ligeramente el tamaño del texto */
+    font-size: 3rem; /* Reducir ligeramente el tamaño del texto */
   }
 
   .video_promocional {
+    height: fit-content;
       margin-top: 20px;
   }
 
@@ -163,19 +159,25 @@ margin: 2rem;
       aspect-ratio: 16/9; /* Mantiene proporción de video */
   }
 }
-
+.video-promocional{
+  height: fit-content;
+}
 /* <------------------------------------------vídeo/gif----------------------------------> */
 /* --- Estilos generales existentes --- */
 .video_promocional {
-  height: 100vh;
+height: fit-content;
   width: auto;
-  margin: 5rem 0 0 0;
+  margin: 5rem;
 }
 
 .video_titulo {
   font-size: 4rem;
   margin: 1rem;
   text-align: center;
+}
+
+iframe {
+  border-radius: 0.2rem;
 }
 
 .video-contenedor {
@@ -185,32 +187,28 @@ margin: 2rem;
   border-radius: 0.5rem;
   height: 315px;
   width: auto;
-  position: relative;
+  gap : 1rem;
+  ;
 }
 
 .gif {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
   width: 300px;
   height: 100%;
-  position: absolute;
+  border-radius: 0.2rem;
 }
 
 .gif1 {
   background-image: url(img/ado-dance-ado-freedom.gif);
-  left: -320px; /* Ubicación de la izquierda */
 }
 
 .gif2 {
   background-image: url(img/ado-dance-ado-freedom.gif);
-  right: -320px; /* Ubicación de la derecha */
 }
 
-.video_contenedor video {
-  border-radius: 0.5rem;
+.video_contenedor iframe {
   margin: 2rem auto;
-  display: block;
   width: 560px; /* Aseguramos que el video tenga un tamaño fijo */
   height: 315px; /* Ajustamos la altura del video */
 }
@@ -232,18 +230,13 @@ margin: 2rem;
     flex-direction: column; /* Cambia a disposición vertical */
     height: auto; /* Ajusta la altura según el contenido */
     gap: 1rem; /* Espacio entre elementos */
-    position: relative; /* Necesario para los GIFs en la versión móvil */
   }
 
   .gif {
     width: 100%; /* GIF ocupa todo el ancho disponible en pantallas pequeñas */
     height: 200px; /* Ajusta la altura de los GIFs */
-    position: static; /* Reposiciona los GIFs */
   }
 
-  .gif1, .gif2 {
-    margin: 0; /* Elimina márgenes laterales */
-  }
 
   iframe {
     width: 100%; /* Video ocupa todo el ancho disponible */
@@ -274,6 +267,7 @@ margin: 2rem;
 /* ---------------------------------------footer------------------------------------ */
 
 footer {
+  height: fit-content;
   background-color: #121212;
   display: flex;
   flex-direction: column;
@@ -281,7 +275,6 @@ footer {
   justify-content: center;
   text-align: center;
   padding: 20px;
-  margin-top: 600px;
 }
 
 .social-media h3 {
@@ -528,4 +521,12 @@ footer {
 
 .acordeon-toggle:hover {
   text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* --------------------------------------- Marquee------------------------------------ */
+
+marquee {
+  background-color: #121212;
+  color: white;
+  font-size: 2rem;
 }
