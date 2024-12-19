@@ -21,12 +21,19 @@
         <li><a href="#biografia" onclick="toggleMenu()">Biografía</a></li>
         <li><a href="#tienda" onclick="toggleMenu()">Tienda</a></li>
     </ul>
-    
+    <div class="acordeon">
+        <p class="acordeon-contenido">Derechos reservados © 2024.</p>
+        <span class="acordeon-mas">
+            Queda estrictamente prohibida la reproducción total o parcial, distribución, o modificación de cualquier contenido sin el previo consentimiento por escrito del titular. Para más información, consulta los términos y condiciones.
+        </span>
+        <a href="javascript:void(0);" class="acordeon-toggle">Leer más</a>
+    </div>
 </div>
 
 <div class="menu-toggle" onclick="toggleMenu()">
     <span>Menu</span>
 </div>
+
 
 <div class="hero" id="inicio">
     <h1 class="titulo">El gran concierto de <span>Ado</span></h1>
@@ -120,6 +127,32 @@
                 $('.menu-toggle').show(); // Muestra el botón si el menú se cierra
             }
         });
+        $('.acordeon-toggle').click(function () {
+        var acordeon = $(this).prev('.acordeon-contenido'); // Encuentra el contenido principal
+        var contenidoAdicional = acordeon.find('.acordeon-mas'); // Encuentra el contenido adicional
+
+        // Alterna la visibilidad del contenido adicional
+        contenidoAdicional.slideToggle();
+
+        // Cambia el texto de "Leer más" a "Leer menos" y viceversa
+        if ($(this).text() === 'Leer más') {
+            $(this).text('Leer menos');
+        } else {
+            $(this).text('Leer más');
+        }
+    });
+    document.querySelectorAll('.acordeon-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function () {
+        const acordeonMas = this.previousElementSibling;
+        if (acordeonMas.style.display === 'block') {
+            acordeonMas.style.display = 'none';
+            this.textContent = 'Leer más';
+        } else {
+            acordeonMas.style.display = 'block';
+            this.textContent = 'Leer menos';
+        }
+    });
+});
     });
     </script>
 
