@@ -59,8 +59,6 @@
             <div class=" gif gif2"></div>
         </div>
     </div>
-    
-
 </div>
 
 <footer>
@@ -98,8 +96,8 @@
     
         // Cierra el menú cuando se hace clic fuera de él
         $(document).click(function (event) {
-            if (!$(event.target).closest('#menuLateral').length && 
-                !$(event.target).closest('.menu-toggle').length && 
+            if (!$(event.target).closest('#menuLateral').length &&
+                !$(event.target).closest('.menu-toggle').length &&
                 $('#menuLateral').hasClass('active')) {
                 $('#menuLateral').removeClass('active');
                 $('.menu-toggle').show(); // Muestra el botón si el menú se cierra
