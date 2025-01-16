@@ -42,3 +42,146 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+
+/* ---------------------------------------footer------------------------------------ */
+
+footer {
+    height: fit-content;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media h3 {
+    color: white;
+    text-align: center;
+    margin: 5px 0;
+    /* Reducido el margen superior e inferior */
+    font-size: 1.5rem;
+    /* Ajustamos el tamaño de la fuente */
+}
+
+.icons {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.line-container {
+    margin-top: 20px;
+}
+
+.line-footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.line-footer ul li {
+    margin: 5px;
+}
+
+.line-footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.line-footer ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.line-footer p {
+    color: white;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* --- Media Queries para Responsividad --- */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .social-media h3 {
+        font-size: 1.2rem;
+        /* Reducimos aún más el tamaño del título */
+        margin: 5px 0;
+    }
+
+    .line-footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .icons {
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    .line-footer p {
+        font-size: 11px;
+        /* Reducimos un poco el tamaño del texto de copyright */
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .social-media h3 {
+        font-size: 1.3rem;
+        /* Ajuste moderado del tamaño del título */
+    }
+
+    .line-footer ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .icons {
+        gap: 15px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .line-footer p {
+        font-size: 12px;
+    }
+}
+
+/* Pantallas grandes (escritorio) */
+@media (min-width: 1025px) {
+    footer {
+        padding: 30px;
+    }
+
+    .icons {
+        gap: 20px;
+    }
+
+    .social-media h3 {
+        font-size: 1.5rem;
+        /* Título de tamaño normal en pantallas grandes */
+    }
+
+    .line-footer p {
+        font-size: 12px;
+    }
+}
