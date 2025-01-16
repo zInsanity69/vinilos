@@ -17,7 +17,7 @@
 
   .hero {
     height: 100vh;
-    background-image: url(img/Aula\ De\ Anime.jpg);
+    background-image: url(../img/Aula\ De\ Anime.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -200,11 +200,11 @@ iframe {
 }
 
 .gif1 {
-  background-image: url(img/ado-dance-ado-freedom.gif);
+  background-image: url(../img/ado-dance-ado-freedom.gif);
 }
 
 .gif2 {
-  background-image: url(img/ado-dance-ado-freedom.gif);
+  background-image: url(../img/ado-dance-ado-freedom.gif);
 }
 
 .video_contenedor iframe {
