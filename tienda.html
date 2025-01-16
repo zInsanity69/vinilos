@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/tienda.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=M+PLUS+1p&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <title>Tienda</title>
+</head>
+<body>
+    <header class="headerContainer">
+        <h1>Tienda</h1>
+    </header>
+    <main>
+        <div class="menu-lateral" id="menuLateral">
+            <div class="menu-logo" onclick="toggleMenu()">
+                <img src="img/vinilea.PNG" alt="Logo">
+            </div>
+            <ul class="menu-links">
+                <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
+                <li><a href="#biografia" onclick="toggleMenu()">Biografía</a></li>
+                <li><a href="#tienda" onclick="toggleMenu()">Tienda</a></li>
+                <li><a href="#catalogo" onclick="toggleMenu()">Catálogo</a></li>
+            </ul>
+            <div class="acordeon">
+                <p class="acordeon-contenido">Derechos reservados © 2024.</p>
+                <span class="acordeon-mas">
+                    Queda estrictamente prohibida la reproducción total o parcial, distribución, o modificación de cualquier contenido sin el previo consentimiento por escrito del titular. Para más información, consulta los términos y condiciones.
+                </span>
+                <a href="javascript:void(0);" class="acordeon-toggle">Leer más</a>
+            </div>
+        </div>
+    
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span>Menu</span>
+        </div>
+    
+        <div class="vinylContainer" name="vinylContainer" id="vinylContainer">
+            <h3>Mira nuestra selección de vinilos</h3>
+            <!--Pasar a js el div vinylPrint, poner en name la variable nombre, en descripcion la que contiene descripcion etc. -->
+            <!--Hacer en el js un ajax y un for-each para que la info de cada columna  se cargue-->
+            <div class="vinylPrint" name="vinylPrint" id="vinylPrint">
+                <label for="name">Nombre</label>
+                <h4 class="name"></h4>
+                <img src="">
+                <label for="description">Descripción</label>
+                <h6 class="description" name="description" id="description" ></h6>
+                <label for="Price">Precio:</label>
+                <h6 class="price" name="price" id="price"></h6>
+                <h6 class="date" name="date" id="date"></h6>
+            </div>
+        </div>
+    </main>
+    
+    
+<footer>
+    <div class="social-media">
+        <h3>Redes sociales</h3>
+    </div>
+    <div class="icons">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path> <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path> </svg>
+    </div>
+
+<div class="container footer line-container">
+
+    <div class="navbar-nav line6 line-footer">
+        <ul>
+            <li class="nav-item"><a href="#">AVISO LEGAL</a></li>
+            <li class="nav-item"><a href="#">POLÍTICA DE COOKIES</a></li>
+            <li class="nav-item"><a href="#">CONDICIONES DE CONTRATACIÓN</a></li>
+            <li class="nav-item"><a href="#">CONTRATO DE DESENTIMIENTO</a></li>
+            <li class="nav-item"><a href="#">CANAL ÉTICO</a></li></ul><p>Copyright © 2024 Vinilea S.L. Todos los derechos reservados.</p></div>
+    </div>
+</footer>
+<script>
+    $(document).ready(function () {
+        // Función para alternar el menú lateral
+        $('.menu-toggle').click(function () {
+            $('#menuLateral').toggleClass('active'); // Activa/desactiva la clase 'active'
+    
+            if ($('#menuLateral').hasClass('active')) {
+                $('.menu-toggle').hide(); // Oculta el botón cuando el menú está abierto
+            } else {
+                $('.menu-toggle').show(); // Muestra el botón cuando el menú está cerrado
+            }
+        });
+    
+        // Cierra el menú cuando se hace clic fuera de él
+        $(document).click(function (event) {
+            if (!$(event.target).closest('#menuLateral').length &&
+                !$(event.target).closest('.menu-toggle').length &&
+                $('#menuLateral').hasClass('active')) {
+                $('#menuLateral').removeClass('active');
+                $('.menu-toggle').show(); // Muestra el botón si el menú se cierra
+            }
+        });
+    
+        // Agrega desplazamiento suave y cierra el menú al hacer clic en un enlace
+        $('.menu-links a').click(function (event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            var targetId = $(this).attr('href'); // Obtiene el destino
+            var targetElement = $(targetId);
+    
+            $('html, body').animate({
+                scrollTop: targetElement.offset().top
+            }, 600); // Desplazamiento suave
+    
+            // Cierra el menú si está activo
+            if ($('#menuLateral').hasClass('active')) {
+                $('#menuLateral').removeClass('active');
+                $('.menu-toggle').show(); // Muestra el botón si el menú se cierra
+            }
+        });
+        $('.acordeon-toggle').click(function () {
+        var acordeon = $(this).prev('.acordeon-contenido'); // Encuentra el contenido principal
+        var contenidoAdicional = acordeon.find('.acordeon-mas'); // Encuentra el contenido adicional
+
+        // Alterna la visibilidad del contenido adicional
+        contenidoAdicional.slideToggle();
+
+        // Cambia el texto de "Leer más" a "Leer menos" y viceversa
+        if ($(this).text() === 'Leer más') {
+            $(this).text('Leer menos');
+        } else {
+            $(this).text('Leer más');
+        }
+    });
+    document.querySelectorAll('.acordeon-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function () {
+        const acordeonMas = this.previousElementSibling;
+        if (acordeonMas.style.display === 'block') {
+            acordeonMas.style.display = 'none';
+            this.textContent = 'Leer más';
+        } else {
+            acordeonMas.style.display = 'block';
+            this.textContent = 'Leer menos';
+        }
+    });
+});
+    });
+    </script>
+</body>
+</html>
