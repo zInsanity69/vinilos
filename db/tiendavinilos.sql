@@ -114,22 +114,21 @@ CREATE TABLE `discos` (
 --
 
 INSERT INTO `discos` (`id`, `nombre`, `descripcion`, `precio`, `artista`, `portada`, `fecha`, `publicacion`) VALUES
-(16, 'Cowboy Bebop: Original Soundtrack', 'Una icónica mezcla de jazz y blues que captura el espíritu del espacio y la aventura.', 19.99, 1, 'Portada', '1998-05-21', 1),
-(17, 'Neon Genesis Evangelion: Original Soundtrack', 'Melodías dramáticas y tensas que reflejan la profundidad psicológica de la serie.', 21.99, 2, 'Portada', '1995-12-04', 1),
-(18, 'Princess Mononoke: Soundtrack', 'Música majestuosa y melancólica que celebra la lucha entre la naturaleza y los humanos.', 18.99, 3, 'Portada', '1997-07-02', 1),
-(19, 'Spirited Away: Soundtrack', 'Piezas mágicas que acompañan el viaje de Chihiro en un mundo espiritual.', 20.99, 3, 'Portada', '2001-07-20', 1),
-(20, 'Attack on Titan: Original Soundtrack', 'Música épica e intensa que eleva las batallas contra los titanes.', 22.99, 4, 'Portada', '2013-04-01', 1),
-(21, 'Your Name (Kimi no Na wa): Soundtrack', 'Canciones suaves y emocionales que reflejan el tono de la película.', 19.99, 5, 'Portada', '2016-08-26', 1),
-(22, 'My Neighbor Totoro: Soundtrack', 'Música alegre y nostálgica que celebra la infancia y la magia.', 17.99, 3, 'Portada', '1988-04-16', 1),
-(23, 'Fullmetal Alchemist: Brotherhood Original Soundtrack', 'Temas emocionales y épicos que acompañan las aventuras de los hermanos Elric.', 23.99, 6, 'Portada', '2009-04-05', 1),
-(24, 'Death Note: Original Soundtrack', 'Música oscura y misteriosa que complementa la narrativa psicológica del anime.', 21.99, 7, 'Portada', '2006-10-04', 1),
-(25, 'Naruto: Original Soundtrack', 'Canciones dinámicas que combinan lo moderno y lo tradicional japonés.', 18.99, 9, 'Portada', '2002-10-03', 1),
-(26, 'Bleach: Original Soundtrack', 'Melodías llenas de acción y emoción para un anime lleno de batallas épicas.', 20.99, 2, 'Portada', '2004-10-05', 1),
-(27, 'Sword Art Online: Original Soundtrack', 'Música inmersiva que transporta al mundo virtual del anime.', 22.99, 10, 'Portada', '2012-07-08', 1),
-(28, 'One Piece: Original Soundtrack', 'Melodías aventureras que reflejan las travesías de los piratas.', 19.99, 11, 'Portada', '1999-10-20', 1),
-(29, 'Demon Slayer: Kimetsu no Yaiba Soundtrack', 'Una mezcla épica de música tradicional japonesa y orquestal.', 24.99, 10, 'Portada', '2019-04-06', 1),
-(30, 'Tokyo Ghoul: Original Soundtrack', 'Música atmosférica que captura la oscuridad y el conflicto interno del protagonista.', 21.99, 13, 'Portada', '2014-07-03', 1);
-
+(16, 'Cowboy Bebop: Original Soundtrack', 'Una icónica mezcla de jazz y blues que captura el espíritu del espacio y la aventura.', 19.99, 1, '../vinilos/portadas/cowboy-bebop.jpg ', '1998-05-21', 1),
+(17, 'Neon Genesis Evangelion: Original Soundtrack', 'Melodías dramáticas y tensas que reflejan la profundidad psicológica de la serie.', 21.99, 2, '../vinilos/portadas/neon-evangelion.jpg', '1995-12-04', 1),
+(18, 'Princess Mononoke: Soundtrack', 'Música majestuosa y melancólica que celebra la lucha entre la naturaleza y los humanos.', 18.99, 3, '../vinilos/portadas/princesa-mononoke.jpg', '1997-07-02', 1),
+(19, 'Spirited Away: Soundtrack', 'Piezas mágicas que acompañan el viaje de Chihiro en un mundo espiritual.', 20.99, 3, '../vinilos/portadas/el-viaje-de-chihiro.jpg ', '2001-07-20', 1),
+(20, 'Attack on Titan: Original Soundtrack', 'Música épica e intensa que eleva las batallas contra los titanes.', 22.99, 4, '../vinilos/portadas/ataque-de-titanes.jpg', '2013-04-01', 1),
+(21, 'Your Name (Kimi no Na wa): Soundtrack', 'Canciones suaves y emocionales que reflejan el tono de la película.', 19.99, 5, '../vinilos/portadas/your-name.jpg', '2016-08-26', 1),
+(22, 'My Neighbor Totoro: Soundtrack', 'Música alegre y nostálgica que celebra la infancia y la magia.', 17.99, 3, '../vinilos/portadas/mi-vecino-totoro.jpg', '1988-04-16', 1),
+(23, 'Fullmetal Alchemist: Brotherhood Original Soundtrack', 'Temas emocionales y épicos que acompañan las aventuras de los hermanos Elric.', 23.99, 6, '../vinilos/portadas/fullmeta-alchemist.jpg', '2009-04-05', 1),
+(24, 'Death Note: Original Soundtrack', 'Música oscura y misteriosa que complementa la narrativa psicológica del anime.', 21.99, 7, '../vinilos/portadas/death-note.jpg', '2006-10-04', 1),
+(25, 'Naruto: Original Soundtrack', 'Canciones dinámicas que combinan lo moderno y lo tradicional japonés.', 18.99, 9, '../vinilos/portadas/naruto.jpg', '2002-10-03', 1),
+(26, 'Bleach: Original Soundtrack', 'Melodías llenas de acción y emoción para un anime lleno de batallas épicas.', 20.99, 2, '../vinilos/portadas/blech.jpg', '2004-10-05', 1),
+(27, 'Sword Art Online: Original Soundtrack', 'Música inmersiva que transporta al mundo virtual del anime.', 22.99, 10, '../vinilos/portadas/sao.jpg', '2012-07-08', 1),
+(28, 'One Piece: Original Soundtrack', 'Melodías aventureras que reflejan las travesías de los piratas.', 19.99, 11, '../vinilos/portadas/one-piece.jpg', '1999-10-20', 1),
+(29, 'Demon Slayer: Kimetsu no Yaiba Soundtrack', 'Una mezcla épica de música tradicional japonesa y orquestal.', 24.99, 10, '../vinilos/portadas/kimetsu-no-yaiba.jpg', '2019-04-06', 1),
+(30, 'Tokyo Ghoul: Original Soundtrack', 'Música atmosférica que captura la oscuridad y el conflicto interno del protagonista.', 21.99, 13, '../vinilos/portadas/Tokyo-Ghoul.jpg', '2014-07-03', 1);
 -- --------------------------------------------------------
 
 --
