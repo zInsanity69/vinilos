@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-01-2025 a las 20:02:19
+-- Tiempo de generación: 19-01-2025 a las 20:08:35
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -117,7 +117,7 @@ INSERT INTO `discos` (`id`, `nombre`, `descripcion`, `precio`, `artista`, `porta
 (16, 'Cowboy Bebop: Original Soundtrack', 'Una icónica mezcla de jazz y blues que captura el espíritu del espacio y la aventura.', 19.99, 1, '../vinilos/portadas/cowboy-bebop.jpg ', '1998-05-21', 1),
 (17, 'Neon Genesis Evangelion: Original Soundtrack', 'Melodías dramáticas y tensas que reflejan la profundidad psicológica de la serie.', 21.99, 2, '../vinilos/portadas/neon-evangelion.jpg', '1995-12-04', 1),
 (18, 'Princess Mononoke: Soundtrack', 'Música majestuosa y melancólica que celebra la lucha entre la naturaleza y los humanos.', 18.99, 3, '../vinilos/portadas/princesa-mononoke.jpg', '1997-07-02', 1),
-(19, 'Spirited Away: Soundtrack', 'Piezas mágicas que acompañan el viaje de Chihiro en un mundo espiritual.', 20.99, 3, '', '2001-07-20', 1),
+(19, 'Spirited Away: Soundtrack', 'Piezas mágicas que acompañan el viaje de Chihiro en un mundo espiritual.', 20.99, 3, '../vinilos/portadas/el-viaje-de-chihiro.jpg ', '2001-07-20', 1),
 (20, 'Attack on Titan: Original Soundtrack', 'Música épica e intensa que eleva las batallas contra los titanes.', 22.99, 4, '../vinilos/portadas/ataque-de-titanes.jpg', '2013-04-01', 1),
 (21, 'Your Name (Kimi no Na wa): Soundtrack', 'Canciones suaves y emocionales que reflejan el tono de la película.', 19.99, 5, '../vinilos/portadas/your-name.jpg', '2016-08-26', 1),
 (22, 'My Neighbor Totoro: Soundtrack', 'Música alegre y nostálgica que celebra la infancia y la magia.', 17.99, 3, '../vinilos/portadas/mi-vecino-totoro.jpg', '1988-04-16', 1),
