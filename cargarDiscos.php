@@ -28,7 +28,7 @@ foreach ($discos as $disco) {
     echo '<div class="vinylPrint" name="vinylPrint" id="vinylPrint">
         <label for="name">Nombre</label>
         <h4 class="name">'.$disco["nombre"].'</h4>
-        <img src="../vinilos/portadas/blech.jpg" >
+        <img src='.$disco["portada"].' >
         <label for="description">Descripción</label>
         <h6 class="description" name="description" id="description">'.$disco["descripcion"].'</h6>
         <label for="Price">Precio:</label>
