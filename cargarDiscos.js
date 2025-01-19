@@ -1,9 +1,10 @@
-$document.ready(function(){
+$(document).ready(function(){
     $.ajax({
         url:"cargarDiscos.php",
         type:"GET",
         success:function(response){
-            $('#mensaje').html(response.mensaje);
+            console.log(response)
+            $('#vinylContainer').html(response);
         },
         error:function(){
             $('#mensaje').html('Error al cargar los elementos.');
