@@ -1,36 +1,48 @@
 <?php
 
+// Configuración de encabezados
 header('Content-Type: application/json; charset=utf-8');
 
-include "./config.php";
+include "./config.php"; // Archivo de configuración con la conexión a la base de datos
 
 session_start();
 
-$correo = $_POST["email"];
-$pass = $_POST["pass"];
+// Validar si los datos están presentes
+if (empty($_POST["email"]) || empty($_POST["pass"])) {
+    echo json_encode(['success' => false, 'error' => 'Correo y contraseña son obligatorios']);
+    exit;
+}
 
+$email = trim($_POST["email"]);
+$pass = trim($_POST["pass"]);
 
-$slq = "SELECT nombre, rol FROM usuarios WHERE " . $correo .  " AND " . $pass;
-$result = $con -> query($slq);
+// Consulta SQL preparada para evitar inyecciones
+$sql = "SELECT nombre, rol FROM usuarios WHERE correo = ? and pass = ?";
+$stmt = $con->prepare($sql);
+
+if (!$stmt) {
+    echo json_encode(['success' => false, 'error' => 'Error en la consulta SQL']);
+    exit;
+}
+
+$stmt->bind_param("ss", $email , $pass);
+$stmt->execute();
+$result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
 
-    if ($row = $result->fetch_assoc()) {
-
+        // Guardar datos del usuario en la sesión
         $_SESSION["nombre"] = $row["nombre"];
-        $_SESSION["rol"] = $rol["rol"];
+        $_SESSION["rol"] = $row["rol"];
 
-        echo json_encode(['success' => true]);
-        
+        echo json_encode(['success' => true, 'rol' => $row["rol"]]);
     } else {
-        
-        echo json_encode(['success' => false]);
-}
-
-}
-
-
-
-
+        echo json_encode(['success' => false, 'error' => 'Contraseña incorrecta']);
+    }
+    
+// Cerrar conexión
+$stmt->close();
+$con->close();
 
 ?>
