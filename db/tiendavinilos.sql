@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-01-2025 a las 11:27:48
+-- Tiempo de generación: 19-01-2025 a las 20:08:35
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -129,6 +129,7 @@ INSERT INTO `discos` (`id`, `nombre`, `descripcion`, `precio`, `artista`, `porta
 (28, 'One Piece: Original Soundtrack', 'Melodías aventureras que reflejan las travesías de los piratas.', 19.99, 11, '../vinilos/portadas/one-piece.jpg', '1999-10-20', 1),
 (29, 'Demon Slayer: Kimetsu no Yaiba Soundtrack', 'Una mezcla épica de música tradicional japonesa y orquestal.', 24.99, 10, '../vinilos/portadas/kimetsu-no-yaiba.jpg', '2019-04-06', 1),
 (30, 'Tokyo Ghoul: Original Soundtrack', 'Música atmosférica que captura la oscuridad y el conflicto interno del protagonista.', 21.99, 13, '../vinilos/portadas/Tokyo-Ghoul.jpg', '2014-07-03', 1);
+
 -- --------------------------------------------------------
 
 --
