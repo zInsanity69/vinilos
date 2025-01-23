@@ -52,6 +52,7 @@ $(document).ready(function () {
                                 console.log(response);  // Verifica la respuesta completa
                                 if (response.success) {
                                     console.log("Estado actualizado correctamente");
+                                    obtenerVinilos();  // Refrescar el grid de vinilos después de la actualización
                                 } else {
                                     alert("Error al actualizar el estado");
                                 }

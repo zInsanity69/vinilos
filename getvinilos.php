@@ -24,7 +24,7 @@ if ($con->connect_error) {
 }
 
 // Consulta SQL para obtener los vinilos
-$sql = "SELECT d.id as id, nombre, descripcion, precio, a.artista as artista, portada fecha, publicacion  FROM discos d JOIN artistas a ON d.artista = a.id";
+$sql = "SELECT d.id as id, nombre, descripcion, precio, a.artista as artista, portada, fecha, publicacion  FROM discos d JOIN artistas a ON d.artista = a.id";
 
 // Ejecutar la consulta
 $result = $con->query($sql);

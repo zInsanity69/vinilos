@@ -36,7 +36,7 @@ if (!isset($_SESSION["rol"]) || $_SESSION["rol"] != 1) {
         </div>
         <div class="form-check align-self-center">
             <input type="checkbox" id="filtroMostrar" class="form-check-input">
-            <label for="filtroMostrar" class="form-check-label">Mostrar todos</label>
+            <label for="filtroMostrar" class="form-check-label">Solo publicados</label>
         </div>
     </div>
 
