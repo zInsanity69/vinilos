@@ -4,14 +4,55 @@ body {
     font-style: normal;
     margin: 0%;
     box-sizing: border-box;
+    background-color:rgb(77, 72, 87)
 }
 
-
-/*---------------------------------------vinylContainer------------------------------------ */
+/*---------------------------------------header------------------------------------ */
+header{
+    background-color: #44434b;
+    color: #fff;
+    text-align: center;
+    
+}
+/*---------------------------------------estiloVinilos------------------------------------ */
 
 .vinylContainer{
     display: flex;
+    flex-wrap: wrap;
+    gap:20 px;
 
+}
+
+.vinylPrint label{
+    margin:2%;
+}
+
+
+.vinylPrint {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin: 2%;
+    width:22%;
+    height: 22%;
+    text-align: center;
+    border-radius: 8%;
+    padding: 1 rem;
+    flex-direction: column;
+}
+
+.vinylPrint h6{
+    font-size: medium;
+}
+
+.vinylPrint h4{
+    font-size:x-large;
+}
+
+.imgContainer{
+    width: 70%;
+    height:70%;
+    margin-bottom: 2%;
 }
 
 

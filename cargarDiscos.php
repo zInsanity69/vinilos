@@ -24,18 +24,16 @@ if ($result->num_rows > 0) {
 }
 $filas = "";
 
-foreach ($discos as $disco) {
-    echo '<div class="vinylPrint" name="vinylPrint" id="vinylPrint">
-        <label for="name">Nombre</label>
-        <h4 class="name">'.$disco["nombre"].'</h4>
-        <img class="imgContainer" src='.$disco["portada"].' >
-        <label for="description">Descripción</label>
-        <h6 class="description" name="description" id="description">'.$disco["descripcion"].'</h6>
-        <label for="Price">Precio:</label>
-        <h6 class="price" name="price" id="price">'.$disco["precio"].'</h6>
-        <h6 class="date" name="date" id="date">'.$disco["fecha"].'</h6>
-    </div>';
-
+    foreach ($discos as $disco) {
+        $filas .= '<div class="vinylPrint" name="vinylPrint">
+            <h4 class="name">'.$disco["nombre"].'</h4>
+            <img class="imgContainer" alt="img" src="'.$disco["portada"].'">
+            <label for="description">Descripción</label>
+            <h6 class="description" name="description">'.$disco["descripcion"].'</h6>
+            <label for="Price">Precio:</label>
+            <h6 class="price" name="price">'.$disco["precio"].'</h6>
+            <h6 class="date" name="date">'.$disco["fecha"].'</h6>
+        </div>';
 }
 
 echo $filas;
