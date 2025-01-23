@@ -9,10 +9,9 @@ body {
 
 /*---------------------------------------header------------------------------------ */
 header{
-    background-color: #44434b;
+    background-color: #35455e;
     color: #fff;
     text-align: center;
-    
 }
 /*---------------------------------------estiloVinilos------------------------------------ */
 
@@ -20,40 +19,60 @@ header{
     display: flex;
     flex-wrap: wrap;
     gap:20 px;
-
+    justify-content: space-around;
 }
-
-.vinylPrint label{
-    margin:2%;
-}
-
 
 .vinylPrint {
+    display: flex;
     background-color: #f0f0f0;
     padding: 1rem;
     border: 1px solid #ccc;
     margin: 2%;
     width:22%;
-    height: 22%;
+    flex-direction: column;
+    min-height: 22%;
+    max-height: 40%;
     text-align: center;
     border-radius: 8%;
     padding: 1 rem;
     flex-direction: column;
+    align-items: center;
 }
 
 .vinylPrint h6{
     font-size: medium;
+    margin: 5px 0;
 }
 
 .vinylPrint h4{
     font-size:x-large;
+    margin: 5px 0;
 }
 
 .imgContainer{
-    width: 70%;
-    height:70%;
-    margin-bottom: 2%;
+    width: 60%;
+    height:60%;
+    max-height: 120px;
+    object-fit: cover;
+    margin: 0 auto;
 }
+
+
+/*---------------------------------------vinilo Media-querys ------------------------------------ */
+
+/* Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .vinylPrint {
+        width: 45%; /* Ajustar el ancho en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .vinylPrint {
+        width: 100%; /* Tarjetas en una sola columna para pantallas pequeñas */
+    }
+}
+
 
 
 

@@ -28,14 +28,11 @@ $filas = "";
         $filas .= '<div class="vinylPrint" name="vinylPrint">
             <h4 class="name">'.$disco["nombre"].'</h4>
             <img class="imgContainer" alt="img" src="'.$disco["portada"].'">
-            <label for="description">Descripción</label>
             <h6 class="description" name="description">'.$disco["descripcion"].'</h6>
-            <label for="Price">Precio:</label>
-            <h6 class="price" name="price">'.$disco["precio"].'</h6>
+            <h6 class="price" name="price">'.$disco["precio"]."€".'</h6>
             <h6 class="date" name="date">'.$disco["fecha"].'</h6>
         </div>';
 }
-
 echo $filas;
 
 $conn->close();
