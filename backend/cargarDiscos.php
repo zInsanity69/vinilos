@@ -1,16 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tiendavinilos";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die(json_encode(["mensaje" => "Error al conectar con la base de datos"]));
-}
-
-
+include ("./config.php");
 
 $sql = "SELECT nombre,descripcion,precio,artista,portada,fecha FROM discos ";
 

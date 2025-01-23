@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $.ajax({
-        url:"cargarDiscos.php",
+        url:"./cargarDiscos.php",
         type:"GET",
         success:function(response){
             console.log(response)

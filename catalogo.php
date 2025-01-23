@@ -49,7 +49,7 @@ if (!isset($_SESSION["rol"]) || $_SESSION["rol"] != 1) {
 <!-- Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 <!-- Script personalizado -->
-<script src="./getvinilos.js"></script>
+<script src="./backend/js/cargarDiscos.js"></script>
 
 </body>
 </html>
