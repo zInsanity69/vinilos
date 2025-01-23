@@ -1,14 +1,13 @@
-
 body {
     font-family: "Shadows Into Light", cursive;
     font-weight: 400;
     font-style: normal;
     margin: 0%;
     box-sizing: border-box;
-    }
+}
 
 
-/*---------------------------------------footer------------------------------------ */ 
+/*---------------------------------------footer------------------------------------ */
 
 footer {
     height: fit-content;
@@ -72,4 +71,133 @@ footer {
     color: white;
     font-size: 12px;
     margin-top: 10px;
+}
+
+/* ---------------------------------------Menú lateral------------------------------------ */
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #44434b;
+    color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.menu-lateral.active {
+    left: 0;
+}
+
+.menu-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #4d4857;
+    cursor: pointer;
+}
+
+.menu-logo img {
+    max-width: 100px;
+}
+
+.menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu-links li {
+    margin: 20px 0;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.menu-links a:hover {
+    color: #36628e;
+}
+
+/* Botón de menú */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #35455e;
+    color: #fff;
+    padding: 10px;
+    border-radius: 1rem;
+    cursor: pointer;
+    z-index: 1100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Ocultar el botón cuando el menú está activo */
+.menu-toggle.hidden {
+    display: none;
+}
+
+/* Fondo semitransparente para detectar clics fuera del menú */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.acordeon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centrar horizontalmente */
+    text-align: center;
+    /* Centrar texto */
+}
+
+.acordeon-contenido {
+    margin-bottom: 1rem;
+    /* Espacio entre contenido y acordeón-mas */
+}
+
+.acordeon-mas {
+    display: none;
+    margin-bottom: 1rem;
+    text-align: justify;
+    padding: 10px;
+
+}
+
+.acordeon-toggle {
+    color: #007BFF;
+    /* Color del texto del botón */
+    text-decoration: none;
+    /* Eliminar subrayado */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.acordeon-toggle:hover {
+    text-decoration: underline;
+    /* Subrayado al pasar el ratón */
 }
