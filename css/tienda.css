@@ -10,7 +10,7 @@ body {
 /*---------------------------------------vinylContainer------------------------------------ */
 
 .vinylContainer{
-    display: flexbox;
+    display: flex;
 
 }
 
