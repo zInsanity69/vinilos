@@ -30,9 +30,11 @@ if (!isset($_SESSION["rol"]) || $_SESSION["rol"] != 1) {
 
     <!-- Buscador y filtros -->
     <div class="my-4 d-flex justify-content-between">
-        <div class="form-group w-50">
-            <label for="buscar">Buscar</label>
+        <div class="form-check w-50 align-self-center">
             <input type="text" id="buscar" class="form-control" placeholder="Introduce un nombre">
+        </div>
+        <div class="form-check align-self-center">
+            <button type="submit" class="btn btn-primary btn-block">Añadir vinilos</button>
         </div>
         <div class="form-check align-self-center">
             <input type="checkbox" id="filtroMostrar" class="form-check-input">
@@ -49,7 +51,7 @@ if (!isset($_SESSION["rol"]) || $_SESSION["rol"] != 1) {
 <!-- Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 <!-- Script personalizado -->
-<script src="./backend/js/cargarDiscos.js"></script>
+<script src="./backend/js/getvinilos.js"></script>
 
 </body>
 </html>

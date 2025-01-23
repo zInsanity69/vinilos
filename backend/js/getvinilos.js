@@ -3,7 +3,7 @@ $(document).ready(function () {
     function obtenerVinilos() {
         $.ajax({
             type: "GET",
-            url: "./getvinilos.php",
+            url: "./backend/getvinilos.php",
             dataType: "json",
             success: function (response) {
                 if (response.success) {
@@ -43,7 +43,7 @@ $(document).ready(function () {
                         // Enviar la actualización al servidor
                         $.ajax({
                             type: "POST",
-                            url: "./actualizarpublicacion.php",
+                            url: "./backend/actualizarpublicacion.php",
                             data: {
                                 id: viniloId,
                                 estado: nuevoEstado

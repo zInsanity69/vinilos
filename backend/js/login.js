@@ -7,16 +7,10 @@ $(document).ready(function () {
         let email = $("#email").val().trim();
         let pass = $("#pass").val().trim();
 
-        // Validar que los campos no estén vacíos
-        if (email === "" || pass === "") {
-            mostrarAlerta("Todos los campos son obligatorios", "danger");
-            return;
-        }
-
         // Enviar los datos al servidor usando AJAX
         $.ajax({
             type: "POST",
-            url: "./login.php",
+            url: "./backend/login.php",
             data: { email: email, pass: pass },
             dataType: "json",
             success: function (response) {

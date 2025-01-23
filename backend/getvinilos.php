@@ -1,6 +1,6 @@
 <?php
 
-include "./config.php";
+include "../config.php";
 
 header('Content-Type: application/json;');
 
@@ -19,7 +19,7 @@ if (!isset($_SESSION["rol"]) || $_SESSION["rol"] != 1) {
 
 // Verificar conexión a la base de datos
 if ($con->connect_error) {
-    echo json_encode(['success' => false, 'message' => 'Error de conexión: ' . $conn->connect_error]);
+    echo json_encode(['success' => false, 'message' => 'Error de conexión: ' . $con->connect_error]);
     exit;
 }
 
@@ -30,7 +30,7 @@ $sql = "SELECT d.id as id, nombre, descripcion, precio, a.artista as artista, po
 $result = $con->query($sql);
 
 if (!$result) {
-    echo json_encode(['success' => false, 'message' => 'Error en la consulta: ' . $conn->error]);
+    echo json_encode(['success' => false, 'message' => 'Error en la consulta: ' . $con->error]);
     exit;
 }
 

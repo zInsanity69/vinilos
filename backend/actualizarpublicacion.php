@@ -2,7 +2,7 @@
 
 header('Content-Type: application/json;');
 // Incluir el archivo de configuración para la base de datos
-include "./config.php";
+include "../config.php";
 
 // Comprobar si los parámetros 'id' y 'estado' están definidos
 if (isset($_POST['id']) && isset($_POST['estado'])) {

@@ -1,9 +1,9 @@
 <?php
 
-// Configuración de encabezados
-header('Content-Type: application/json; charset=utf-8');
+include "../config.php"; 
 
-include "./config.php"; // Archivo de configuración con la conexión a la base de datos
+// Configuración de encabezados
+header('Content-Type: application/json; charset=utf-8');// Archivo de configuración con la conexión a la base de datos
 
 session_start();
 
@@ -13,8 +13,8 @@ if (empty($_POST["email"]) || empty($_POST["pass"])) {
     exit;
 }
 
-$email = trim($_POST["email"]);
-$pass = trim($_POST["pass"]);
+$email = $_POST["email"];
+$pass = $_POST["pass"];
 
 // Consulta SQL preparada para evitar inyecciones
 $sql = "SELECT nombre, rol FROM usuarios WHERE correo = ? and pass = ?";
