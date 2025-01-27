@@ -3,15 +3,15 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tiendavinilos";
+$host = "localhost";
+$user = "root";
+$pass = ""; // Tu contraseña de MySQL
+$db   = "tiendavinilos";
 
-// Crear la conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
+$con = new mysqli($host, $user, $pass, $db);
 
-// Verificar la conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+if ($con->connect_error) {
+    die("Conexión fallida: " . $con->connect_error);
 }
+
+?>
