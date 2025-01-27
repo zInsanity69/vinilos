@@ -18,39 +18,10 @@ h1 {
     margin: 0;
 }
 /*---------------------------------------estiloVinilos------------------------------------ */
-
-.vinylContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1rem;
-}
-    .vinylContainer h3{
-        color: antiquewhite;
-    }
-
-.vinylPrint {
-    display: flex;
-    background-color: #f0f0f0;
-    margin: 0.5rem;
-    flex-direction: column;
-    text-align: center;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    flex-direction: column;
-    align-items: center;
-}
-
-.vinylPrint h6{
-    font-size: 1.2rem;
-    margin: 5px 0;
-    max-width: 20rem;
-    text-align: start;
-}
-
 .price{
     color: rgb(142, 25, 25);
 }
+
 
 .vinylPrint h4{
     font-size: 2rem;
@@ -59,11 +30,39 @@ h1 {
     min-height: 8 em;
 }
 
-.imgContainer{
-    width: 60%;
-    height:60%;
-    object-fit: cover;
-    padding: 0.5rem;
+.vinylContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    gap: 20px;
+}
+
+.vinylPrint {
+    display: flex;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    width: 250px; /* Ancho absoluto de las tarjetas /
+    height: auto; / Altura flexible según el contenido /
+    max-height: 500px; / Limita la altura máxima */
+    text-align: center;
+    border-radius: 1rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.vinylPrint h6 {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.imgContainer {
+    margin: 1rem;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 1rem;
 }
 
 
