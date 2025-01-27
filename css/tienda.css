@@ -13,13 +13,17 @@ header{
     color: #fff;
     text-align: center;
 }
+
+h1 {
+    margin: 0;
+}
 /*---------------------------------------estiloVinilos------------------------------------ */
 
 .vinylContainer{
     display: flex;
     flex-wrap: wrap;
-    gap:20 px;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 1rem;
 }
     .vinylContainer h3{
         color: antiquewhite;
@@ -28,23 +32,20 @@ header{
 .vinylPrint {
     display: flex;
     background-color: #f0f0f0;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    margin: 2%;
-    width:22%;
+    margin: 0.5rem;
     flex-direction: column;
-    min-height: 22%;
-    max-height: 40%;
     text-align: center;
-    border-radius: 8%;
-    padding: 1 rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
     flex-direction: column;
     align-items: center;
 }
 
 .vinylPrint h6{
-    font-size: medium;
+    font-size: 1.2rem;
     margin: 5px 0;
+    max-width: 20rem;
+    text-align: start;
 }
 
 .price{
@@ -52,17 +53,17 @@ header{
 }
 
 .vinylPrint h4{
-    font-size:x-large;
+    font-size: 2rem;
     margin: 5px 0;
+    max-width: 25rem;
     min-height: 8 em;
 }
 
 .imgContainer{
     width: 60%;
     height:60%;
-    max-height: 120px;
     object-fit: cover;
-    margin: 0 auto;
+    padding: 0.5rem;
 }
 
 
