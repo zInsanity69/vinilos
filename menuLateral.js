@@ -22,8 +22,7 @@
         });
     
         // Agrega desplazamiento suave y cierra el menú al hacer clic en un enlace
-        $('.menu-links a').click(function (event) {
-            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+        $('.menu-links a').click(function () {
             var targetId = $(this).attr('href'); // Obtiene el destino
             var targetElement = $(targetId);
     

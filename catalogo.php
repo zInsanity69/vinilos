@@ -33,10 +33,12 @@ if (!isset($_SESSION["rol"]) || $_SESSION["rol"] != 1) {
         <div class="form-check w-50 align-self-center">
             <input type="text" id="buscar" class="form-control" placeholder="Introduce un nombre">
         </div>
-        <div class="form-check align-self-center">
+        <div class="form-check align-self-center d-flex justify-content-between">
             <!-- Botón para abrir el modal -->
-            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalAgregarVinilo">Añadir vinilos</button>
+            <button type="button" class="btn btn-primary mr-2" data-toggle="modal" data-target="#modalAgregarVinilo">Añadir vinilos</button>
+            <button type="button" class="btn btn-danger"><a href="./backend/cerrarsesion.php" style="color: white; text-decoration: none;">Cerrar sesión</a></button>
         </div>
+
         <div class="form-check align-self-center">
             <input type="checkbox" id="filtroMostrar" class="form-check-input">
             <label for="filtroMostrar" class="form-check-label">Solo publicados</label>
