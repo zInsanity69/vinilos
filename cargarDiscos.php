@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 
 
 
-$sql = "SELECT nombre,descripcion,precio,artista,portada,fecha FROM discos ";
+$sql = "SELECT nombre,descripcion,precio,artista,portada,fecha FROM discos where publicacion = 1";
 
 $result = $conn->query($sql);
 $discos = [];
