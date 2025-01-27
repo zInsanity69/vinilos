@@ -110,3 +110,32 @@ $(document).ready(function () {
         }
     });
 });
+
+
+   // Enviar el formulario para añadir vinilos
+   $("#formAgregarVinilo").submit(function (e) {
+    e.preventDefault();
+
+    var formData = new FormData(this);
+    $.ajax({
+        type: "POST",
+        url: "./backend/agregarvinilo.php",
+        data: formData,
+        processData: false,
+        contentType: false, // Corrección: cambiar a false
+        success: function (response) {
+            console.log(response); // Corrección: 'response' en lugar de 'reponse'
+            if (response.success) {
+                alert("Vinilo añadido correctamente");
+                $("#modalAgregarVinilo").modal("hide");
+                obtenerVinilos();
+            } else {
+                alert(response.success);
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error("Error en la solicitud AJAX:", status, error);
+            alert("Hubo un problema al añadir el vinilo");
+        }
+    });
+});
