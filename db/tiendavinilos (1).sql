@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-01-2025 a las 20:08:35
+-- Tiempo de generación: 30-01-2025 a las 08:24:17
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -49,7 +49,8 @@ INSERT INTO `artistas` (`id`, `artista`) VALUES
 (10, 'Yuki Kajiura'),
 (11, 'Kohei Tanaka'),
 (12, 'Go Shiina'),
-(13, 'Yutaka Yamada');
+(13, 'Yutaka Yamada'),
+(14, 'a');
 
 -- --------------------------------------------------------
 
@@ -203,7 +204,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `correo`, `nombre`, `pass`, `rol`) VALUES
-(6, '', 'Admin', 'admin', 1);
+(6, 'admin@gmail.com', 'Admin', 'admin', 1);
 
 --
 -- Índices para tablas volcadas
@@ -256,13 +257,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `artistas`
 --
 ALTER TABLE `artistas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `discos`
 --
 ALTER TABLE `discos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `generos`
