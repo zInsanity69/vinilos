@@ -42,7 +42,7 @@ if (isset($_POST["nombre"], $_POST["artista"], $_POST["descripcion"], $_POST["pr
             }
         }
 
-        $rutaDestino = "../vinilos/portadas/" . basename(trim($imagen["name"]));
+        $rutaDestino = "/portadas/" . basename(trim($imagen["name"]));
 
         // Insertar el vinilo en la tabla `vinilos`
         $sqlInsertarVinilo = "INSERT INTO discos (nombre, artista, descripcion, precio, fecha, portada, publicacion) 
