@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 
 $host = getenv('MYSQLHOST');
 $user = getenv('MYSQLUSER');
-$pass = getenv('MYSQLPASSWORD'); // Tu contraseña de MySQL
+$pass = getenv('MYSQL_ROOT_PASSWORD'); // Tu contraseña de MySQL
 $db   = getenv('MYSQLDATABASE');
 
 $con = new mysqli($host, $user, $pass, $db);
