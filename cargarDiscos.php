@@ -5,7 +5,7 @@ $user = getenv('MYSQLUSER');
 $pass = getenv('MYSQL_ROOT_PASSWORD'); // Tu contraseña de MySQL
 $db   = getenv('MYSQLDATABASE');
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($host, $user, $pass, $db);
 
 if ($conn->connect_error) {
     die(json_encode(["mensaje" => "Error al conectar con la base de datos"]));
