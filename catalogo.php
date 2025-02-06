@@ -2,14 +2,14 @@
 
 include "./config.php";
 
-// Iniciar la sesión
-session_start();
+// // Iniciar la sesión
+// session_start();
 
-// Verificar si el usuario tiene un rol de administrador
-if (!isset($_SESSION["rol"]) || $_SESSION["rol"] != 1) {
-    header("Location: ./Login.html");
-    exit; // Asegurarse de que no se ejecute el resto del código si la redirección ocurre
-}
+// // Verificar si el usuario tiene un rol de administrador
+// if (!isset($_SESSION["rol"]) || $_SESSION["rol"] != 1) {
+//     header("Location: ./Login.html");
+//     exit; // Asegurarse de que no se ejecute el resto del código si la redirección ocurre
+// }
 
 ?>
 

@@ -1,8 +1,9 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tiendavinilos";
+
+$host = getenv('MYSQLHOST');
+$user = getenv('MYSQLUSER');
+$pass = getenv('MYSQL_ROOT_PASSWORD'); // Tu contraseña de MySQL
+$db   = getenv('MYSQLDATABASE');
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
