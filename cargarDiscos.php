@@ -4,7 +4,7 @@ $host = getenv('MYSQLHOST');
 $user = getenv('MYSQLUSER');
 $pass = getenv('MYSQL_ROOT_PASSWORD'); // Tu contraseña de MySQL
 $db   = getenv('MYSQLDATABASE');
-
+// no funciona
 $conn = new mysqli($host, $user, $pass, $db);
 
 if ($conn->connect_error) {
