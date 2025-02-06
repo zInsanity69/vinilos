@@ -56,7 +56,7 @@ if (isset($_POST["nombre"], $_POST["artista"], $_POST["descripcion"], $_POST["pr
             echo json_encode(["success" => false, "message" => "Error al insertar el vinilo"]);
         }
     } else {
-        echo json_encode(["success" => false, "message" => "Error al subir la imagen"]);
+        echo json_encode(["success" => false, "message" => "Error al subir la imagen", "ruta" => $rutaDestino]);
     }
 } else {
     echo json_encode(["success" => false, "message" => "Datos incompletos"]);
