@@ -7,7 +7,7 @@ include "./config.php";
 
 // // Verificar si el usuario tiene un rol de administrador
 // if (!isset($_SESSION["rol"]) || $_SESSION["rol"] != 1) {
-//     header("Location: ./Login.html");
+//     header("Location: ./login.html");
 //     exit; // Asegurarse de que no se ejecute el resto del código si la redirección ocurre
 // }
 
