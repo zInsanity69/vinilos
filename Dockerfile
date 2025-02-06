@@ -1,11 +1,13 @@
-# Usa la imagen oficial de PHP con Apache
-FROM php:apache  
-
-# Instala las extensiones necesarias
-RUN docker-php-ext-install mysqli pdo_mysql
-
-# Copia los archivos del proyecto a la carpeta del servidor
-COPY . /var/www/html/  
-
-# Expone el puerto 80
+FROM php:apache
+ 
+# Instalar extensiones necesarias
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+ 
+# Copiar archivos del backend
+COPY . /var/www/html/
+ 
+# Establecer permisos adecuados
+RUN chown -R www-data:www-data /var/www/html
+ 
+# Exponer el puerto 80
 EXPOSE 80
